@@ -15,8 +15,9 @@
         header {
             background-color: #4CAF50;
             color: white;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         nav {
             text-align: center;
@@ -26,6 +27,7 @@
             margin: 0 15px;
             text-decoration: none;
             color: #4CAF50;
+            font-weight: bold;
         }
         nav a:hover {
             text-decoration: underline;
@@ -48,6 +50,33 @@
         h1, h2 {
             color: #4CAF50;
         }
+        .photo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .photo-container pmg {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #4CAF50;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+        ul li:before {
+            content: "\2022";
+            color: #4CAF50;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+        }
     </style>
 </head>
 <body>
@@ -65,6 +94,9 @@
 
     <section id="about">
         <h2>Over Mij</h2>
+        <div class="photo-container">
+            <img src="profile-photo.png" alt="Foto van Tim Vanberghen">
+        </div>
         <p>Hallo! Mijn naam is Tim Vanberghen. Ik ben een student met een passie voor technologie en innovatie. Hier vind je meer over mijn professionele en persoonlijke interesses.</p>
     </section>
 
