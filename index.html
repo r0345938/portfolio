@@ -124,43 +124,41 @@
 
         /* Skill Bars */
         .skill-item {
-    display: flex;
-    align-items: center;
-    margin: 0.5rem 0;
-}
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+        }
 
-.skill-label {
-    width: 150px;
-    font-weight: 600;
-    flex-shrink: 0;
-}
+        .skill-label {
+            width: 150px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
 
-.skill-bar-wrapper {
-    flex-shrink: 0;
-    width: 200px; /* maximale breedte van de balk */
-    background: #e0e0e0;
-    border-radius: 50px;
-    height: 6px; /* minder hoge balk */
-    margin: 0 10px 0 50px; /* Extra marge links (50px) voor meer naar rechts */
-    position: relative;
-    overflow: hidden;
-}
+        .skill-bar-wrapper {
+            flex-shrink: 0;
+            width: 200px; /* maximale breedte van de balk */
+            background: #e0e0e0;
+            border-radius: 50px;
+            height: 6px; /* minder hoge balk */
+            margin: 0 10px 0 50px; /* Extra marge links (50px) voor meer naar rechts */
+            position: relative;
+            overflow: hidden;
+        }
 
-.skill-bar {
-    height: 100%;
-    background: var(--primary-color);
-    border-radius: 50px;
-}
+        .skill-bar {
+            height: 100%;
+            background: var(--primary-color);
+            border-radius: 50px;
+        }
 
-.skill-level {
-    width: 40px;
-    text-align: right;
-    font-size: 0.9rem;
-    font-weight: 600;
-    flex-shrink: 0;
-}
-
-
+        .skill-level {
+            width: 40px;
+            text-align: right;
+            font-size: 0.9rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
 
         /* Sections styling */
         .experience ul {
@@ -219,12 +217,13 @@
     </style>
 </head>
 <body>
-    <header>
+    <header id="home">
         <h1>Mijn Portfolio</h1>
         <p>Welkom op mijn portfolio! Ontdek mijn vaardigheden, werkervaring en meer.</p>
     </header>
     
     <nav>
+        <a href="#home">Home</a>
         <a href="#about">Over mij</a>
         <a href="#skills">Skills</a>
         <a href="#professional">Ervaring</a>
@@ -252,7 +251,6 @@
 
     <section id="skills">
         <h2>Hard Skills</h2>
-        <!-- Voorbeeld van een skill-item met progressbar -->
         <div class="skill-item">
             <div class="skill-label">IoT</div>
             <div class="skill-bar-wrapper">
