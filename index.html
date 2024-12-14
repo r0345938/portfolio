@@ -124,37 +124,42 @@
 
         /* Skill Bars */
         .skill-item {
-            display: flex;
-            align-items: center;
-            margin: 0.5rem 0;
-        }
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
 
-        .skill-label {
-            width: 150px;
-            font-weight: 600;
-        }
+.skill-label {
+    width: 150px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
 
-        .skill-bar-wrapper {
-            flex: 1;
-            background: #e0e0e0;
-            border-radius: 50px;
-            height: 10px;
-            margin: 0 10px;
-            position: relative;
-        }
+.skill-bar-wrapper {
+    flex-shrink: 0;
+    width: 200px; /* maximale breedte van de balk */
+    background: #e0e0e0;
+    border-radius: 50px;
+    height: 6px; /* minder hoge balk */
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
 
-        .skill-bar {
-            height: 10px;
-            background: var(--primary-color);
-            border-radius: 50px;
-        }
+.skill-bar {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 50px;
+}
 
-        .skill-level {
-            width: 40px;
-            text-align: right;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
+.skill-level {
+    width: 40px;
+    text-align: right;
+    font-size: 0.9rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
 
         /* Sections styling */
         .experience ul {
@@ -219,7 +224,7 @@
     </header>
     
     <nav>
-        <a href="#about">Over Mij</a>
+        <a href="#about">Over mij</a>
         <a href="#skills">Skills</a>
         <a href="#professional">Ervaring</a>
         <a href="#contact">Contact</a>
@@ -230,7 +235,7 @@
         <div class="photo-container">
             <img src="profile-photo.png" alt="Foto van Tim Vanberghen">
         </div>
-        <p>Hallo! Mijn naam is Tim Vanberghen. Ik ben een student met een passie voor technologie en innovatie. Hieronder vind je meer over mijn professionele en persoonlijke interesses.</p>
+        <p>Hallo! Mijn naam is Tim Vanberghen. Ik ben een student in de avondopleiding Graduaat IoT. Ondanks mijn graduaat IoT ligt mijn interesse meer in infrastructure. Hieronder vind je meer over mijn professionele en persoonlijke interesses.</p>
         <ul>
             <li><strong>Naam:</strong> Tim Vanberghen</li>
             <li><strong>Geboortedatum:</strong> 22 mei 1990</li>
