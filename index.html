@@ -77,6 +77,16 @@
             display: inline-block;
             width: 1em;
         }
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+        .skill-rating {
+            font-weight: bold;
+            color: #4CAF50;
+            font-family: monospace;
+        }
     </style>
 </head>
 <body>
@@ -89,6 +99,7 @@
         <a href="#about">Over Mij</a>
         <a href="#skills">Vaardigheden</a>
         <a href="#projects">Projecten</a>
+        <a href="#professional">Professionele Inhoud</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -100,33 +111,55 @@
         <p>Hallo! Mijn naam is Tim Vanberghen. Ik ben een student met een passie voor technologie en innovatie. Hier vind je meer over mijn professionele en persoonlijke interesses.</p>
         <ul>
             <li><strong>Voornaam en naam:</strong> Tim Vanberghen</li>
-            <li><strong>Geboortedatum:</strong> 22 mei 1990</li>
-            <li><strong>Verblijfplaats:</strong> Geel, België</li>
-            <li><strong>Telefoonnummer:</strong> +32 494 58 68 76</li>
+            <li><strong>Geboortedatum:</strong> 15 maart 1998</li>
+            <li><strong>Verblijfplaats:</strong> Antwerpen, België</li>
+            <li><strong>Telefoonnummer:</strong> +32 478 11 22 33</li>
             <li><strong>E-mailadres:</strong> <a href="mailto:timvanberghen@hotmail.com">timvanberghen@hotmail.com</a></li>
             <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tim-vanberghen-409002226/" target="_blank">Mijn LinkedIn</a></li>
-            <li><strong>CV:</strong> <a href="CV.pdf" target="_blank">Download mijn CV</a></li>
+            <li><strong>CV:</strong> <a href="cv-tim-vanberghen.pdf" target="_blank">Download mijn CV</a></li>
         </ul>
+        <h3>Hobby's en Interesses</h3>
+        <p>In mijn vrije tijd geniet ik van veldvoetbal en hardlopen. Deze hobby's helpen me fit en gefocust te blijven, zowel fysiek als mentaal.</p>
     </section>
 
     <section id="skills">
-        <h2>Vaardigheden</h2>
+        <h2>Hard Skills</h2>
         <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Python</li>
-            <li>Git en versiebeheer</li>
-            <li>Projectmatig werken</li>
+            <li class="skill-item"><span>IOT</span> <span class="skill-rating">★★★☆☆</span></li>
+            <li class="skill-item"><span>CCNA</span> <span class="skill-rating">★★★☆☆</span></li>
+            <li class="skill-item"><span>Linux</span> <span class="skill-rating">★★★☆☆</span></li>
+            <li class="skill-item"><span>Windows</span> <span class="skill-rating">★★★☆☆</span></li>
+            <li class="skill-item"><span>Windows server (soho)</span> <span class="skill-rating">★★★☆☆</span></li>
+            <li class="skill-item"><span>Python</span> <span class="skill-rating">★★★☆☆</span></li>
+            <li class="skill-item"><span>Docker</span> <span class="skill-rating">★★★☆☆</span></li>
+        </ul>
+        <h2>Soft Skills</h2>
+        <ul>
+            <li>Leiding geven <span class="skill-rating">★★★★☆</span></li>
+            <li>Verantwoordelijkheid <span class="skill-rating">★★★★★</span></li>
+            <li>Administratief werk <span class="skill-rating">★★★★☆</span></li>
+            <li>Mensen motiveren <span class="skill-rating">★★★★★</span></li>
+            <li>Professioneel handelen <span class="skill-rating">★★★★☆</span></li>
         </ul>
     </section>
 
-    <section id="projects">
-        <h2>Projecten</h2>
-        <p>Hier zijn enkele projecten waaraan ik heb gewerkt:</p>
+    <section id="professional">
+        <h2>Praktische Ervaring</h2>
+        <p>Ik heb mijn vaardigheden toegepast in diverse onderwijs- en werkgerelateerde projecten. Hier zijn enkele voorbeelden:</p>
         <ul>
-            <li><strong>Project 1:</strong> [Beschrijving en link]</li>
-            <li><strong>Project 2:</strong> [Beschrijving en link]</li>
-            <li><strong>Project 3:</strong> [Beschrijving en link]</li>
+            <li><strong>Service technieker</strong> (nov. 2022 - mei 2023, Roeselare, Aleris)<br>
+                Onderhoud en in bedrijf stellen van brandcentrales, alarmsystemen...</li>
+            <li><strong>Assistent-teamleader</strong> (jan. 2018 - nov. 2022, Oevel, Toro)<br>
+                Mensen aansturen (+12 personen), planning opmaken voor werknemers, transport van zendingen regelen, stock op orde houden en transacties in SAP beheren.</li>
+            <li><strong>Magazijnier</strong> (apr. 2012 - jan. 2018, Oevel, Toro)<br>
+                Orderpicking, receiving...</li>
         </ul>
+        <h3>Stages</h3>
+        <ul>
+            <li><strong>Software developer/testing</strong> (okt. 2024 - dec. 2024, Genk, Brightest (Gumption))<br>
+                Tijdens mijn stage bij Brightest ontwikkelde ik een project waarin ik een embedded Linux-omgeving simuleerde met Docker. Ik implementeerde een sensor die data via MQTT naar een Mosquitto-broker stuurde, data opsloeg in een MySQL-database, en visualiseerde in Grafana. Door test-driven development (TDD) in Python te gebruiken, waarborgde ik de betrouwbaarheid en kwaliteit van de code.</li>
+        </ul>
+        <p>Referenties zijn op verzoek beschikbaar.</p>
     </section>
 
     <section id="contact">
