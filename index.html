@@ -1,104 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/ >
+    <title>Mijn Portfolio - Tim Vanberghen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Vervang onderstaande link door een correcte koppeling naar Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #333;
+            --background-color: #f4f4f9;
+            --white: #ffffff;
+            --font-family: 'Open Sans', Arial, sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--secondary-color);
         }
+
         header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1.5rem 0;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 2rem 1rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
         }
+
+        header h1 {
+            margin: 0 0 0.5rem;
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
         nav {
+            background: var(--white);
             text-align: center;
-            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
+
         nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #4CAF50;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
+            display: inline-block;
+            margin: 0 1rem;
             padding: 1rem 0;
-            background: #333;
-            color: white;
-            margin-top: 20px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: color 0.3s;
         }
-        h1, h2 {
-            color: #4CAF50;
+
+        nav a:hover {
+            color: #2E7D32;
         }
+
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        h2, h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
         .photo-container {
             text-align: center;
             margin-bottom: 20px;
         }
+
         .photo-container img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 3px solid #4CAF50;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
+
         ul {
             list-style: none;
             padding: 0;
         }
+
         ul li {
             padding: 5px 0;
-            display: flex;
-            align-items: center;
         }
-        ul li:before {
-            content: "\2022";
-            color: #4CAF50;
-            font-weight: bold;
+
+        ul li strong {
             display: inline-block;
-            width: 1em;
+            width: 150px;
+            font-weight: 600;
         }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: var(--secondary-color);
+            color: var(--white);
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* Skill Bars */
         .skill-item {
             display: flex;
-            justify-content: space-between;
-            padding: 5px 0;
+            align-items: center;
+            margin: 0.5rem 0;
         }
-        .skill-rating {
-            font-weight: bold;
-            color: #4CAF50;
-            font-family: monospace;
+
+        .skill-label {
+            width: 150px;
+            font-weight: 600;
+        }
+
+        .skill-bar-wrapper {
+            flex: 1;
+            background: #e0e0e0;
+            border-radius: 50px;
+            height: 10px;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: var(--primary-color);
+            border-radius: 50px;
+        }
+
+        .skill-level {
+            width: 40px;
+            text-align: right;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Sections styling */
+        .experience ul {
+            margin: 0;
+        }
+
+        .experience li {
+            margin-bottom: 1.5rem;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .job-location {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .job-description {
+            margin: 0.5rem 0 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #2E7D32;
+            text-decoration: underline;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            ul li strong {
+                width: 100px;
+            }
+
+            .skill-label {
+                width: 100px;
+            }
+
+            nav a {
+                margin: 0 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Mijn Portfolio</h1>
-        <p>Welkom op mijn portfolio! Hier vind je meer over mijn vaardigheden, werkervaringen,....</p>
+        <p>Welkom op mijn portfolio! Ontdek mijn vaardigheden, werkervaring en meer.</p>
     </header>
     
     <nav>
         <a href="#about">Over Mij</a>
         <a href="#skills">Skills</a>
-        <a href="#professional">Praktische ervaring</a>
+        <a href="#professional">Ervaring</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -107,9 +230,9 @@
         <div class="photo-container">
             <img src="profile-photo.png" alt="Foto van Tim Vanberghen">
         </div>
-        <p>Hallo! Mijn naam is Tim Vanberghen. Ik ben een student met een passie voor technologie en innovatie. Hier vind je meer over mijn professionele en persoonlijke interesses.</p>
+        <p>Hallo! Mijn naam is Tim Vanberghen. Ik ben een student met een passie voor technologie en innovatie. Hieronder vind je meer over mijn professionele en persoonlijke interesses.</p>
         <ul>
-            <li><strong>Voornaam en naam:</strong> Tim Vanberghen</li>
+            <li><strong>Naam:</strong> Tim Vanberghen</li>
             <li><strong>Geboortedatum:</strong> 22 mei 1990</li>
             <li><strong>Verblijfplaats:</strong> Geel, België</li>
             <li><strong>Telefoonnummer:</strong> +32 494 58 68 76</li>
@@ -118,34 +241,121 @@
             <li><strong>CV:</strong> <a href="CV.pdf" target="_blank">Download mijn CV</a></li>
         </ul>
         <h3>Hobby's en Interesses</h3>
-        <p>In mijn vrije tijd geniet ik van veldvoetbal en hardlopen. Deze hobby's helpen me fit en gefocust te blijven, zowel fysiek als mentaal.</p>
+        <p>In mijn vrije tijd geniet ik van veldvoetbal en hardlopen. Deze activiteiten houden me fit en gefocust, zowel fysiek als mentaal.</p>
     </section>
 
     <section id="skills">
         <h2>Hard Skills</h2>
-        <ul>
-            <li>IOT</span> <span class="skill-rating">★★★☆☆</span></li>
-            <li>CCNA</span> <span class="skill-rating">★★★☆☆</span></li>
-            <li>Linux</span> <span class="skill-rating">★★★☆☆</span></li>
-            <li>Windows</span> <span class="skill-rating">★★★☆☆</span></li>
-            <li>Windows server (soho)</span> <span class="skill-rating">★★★☆☆</span></li>
-            <li>Python</span> <span class="skill-rating">★★★☆☆</span></li>
-            <li>Docker</span> <span class="skill-rating">★★★☆☆</span></li>
-        </ul>
+        <!-- Voorbeeld van een skill-item met progressbar -->
+        <div class="skill-item">
+            <div class="skill-label">IoT</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:60%;"></div>
+            </div>
+            <div class="skill-level">3/5</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">CCNA</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:60%;"></div>
+            </div>
+            <div class="skill-level">3/5</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">Linux</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:60%;"></div>
+            </div>
+            <div class="skill-level">3/5</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">Windows</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:60%;"></div>
+            </div>
+            <div class="skill-level">3/5</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">Windows Server</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:60%;"></div>
+            </div>
+            <div class="skill-level">3/5</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">Python</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:60%;"></div>
+            </div>
+            <div class="skill-level">3/5</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">Docker</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:60%;"></div>
+            </div>
+            <div class="skill-level">3/5</div>
+        </div>
+
         <h2>Soft Skills</h2>
-        <ul>
-            <li>Leiding geven <span class="skill-rating">★★★★☆</span></li>
-            <li>Verantwoordelijkheid <span class="skill-rating">★★★★★</span></li>
-            <li>Administratief werk <span class="skill-rating">★★★★☆</span></li>
-            <li>Mensen motiveren <span class="skill-rating">★★★★★</span></li>
-            <li>Professioneel handelen <span class="skill-rating">★★★★☆</span></li>
-        </ul>
-        <h3>Talenkennis</h3>
-        <ul>
-            <li>Nederlands</span> <span class="skill-rating">★★★★★</span></li>
-            <li>Engels</span> <span class="skill-rating">★★★★☆</span></li>
-            <li>Frans</span> <span class="skill-rating">★★☆☆☆</span></li>
-        </ul>
+        <div class="skill-item">
+            <div class="skill-label">Leiding geven</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:80%;"></div>
+            </div>
+            <div class="skill-level">4/5</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">Verantwoordelijkheid</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:100%;"></div>
+            </div>
+            <div class="skill-level">5/5</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">Administratief</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:80%;"></div>
+            </div>
+            <div class="skill-level">4/5</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">Mensen motiveren</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:100%;"></div>
+            </div>
+            <div class="skill-level">5/5</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">Professioneel handelen</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:80%;"></div>
+            </div>
+            <div class="skill-level">4/5</div>
+        </div>
+
+        <h3>Talen</h3>
+        <div class="skill-item">
+            <div class="skill-label">Nederlands</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:100%;"></div>
+            </div>
+            <div class="skill-level">5/5</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">Engels</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:80%;"></div>
+            </div>
+            <div class="skill-level">4/5</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">Frans</div>
+            <div class="skill-bar-wrapper">
+                <div class="skill-bar" style="width:40%;"></div>
+            </div>
+            <div class="skill-level">2/5</div>
+        </div>
     </section>
 
     <section id="professional">
@@ -154,15 +364,18 @@
             <h3>Werkervaring</h3>
             <ul>
                 <li>
-                    <span class="job-title">Service technieker</span> | <span class="job-location">nov. 2022 - mei 2023 | Roeselare, Aleris</span>
+                    <span class="job-title">Service technieker</span><br>
+                    <span class="job-location">nov. 2022 - mei 2023 | Roeselare, Alertis</span>
                     <p class="job-description">Onderhoud en in bedrijf stellen van brandcentrales, alarmsystemen.</p>
                 </li>
                 <li>
-                    <span class="job-title">Assistent-teamleader</span> | <span class="job-location">jan. 2018 - nov. 2022 | Oevel, Toro</span>
-                    <p class="job-description">Aansturen van medewerkers (+12 personen), planningen opstellen, transport organiseren, voorraadbeheer en SAP-gebruik.</p>
+                    <span class="job-title">Assistent-teamleader</span><br>
+                    <span class="job-location">jan. 2018 - nov. 2022 | Oevel, Toro</span>
+                    <p class="job-description">Aansturen van medewerkers (+12 personen), opstellen van planningen, transport organiseren, voorraadbeheer en SAP-gebruik.</p>
                 </li>
                 <li>
-                    <span class="job-title">Magazijnier</span> | <span class="job-location">apr. 2012 - jan. 2018 | Oevel, Toro</span>
+                    <span class="job-title">Magazijnier</span><br>
+                    <span class="job-location">apr. 2012 - jan. 2018 | Oevel, Toro</span>
                     <p class="job-description">Orderpicking, ontvangst en logistieke verwerking van goederen.</p>
                 </li>
             </ul>
@@ -171,25 +384,26 @@
             <h3>Stages</h3>
             <ul>
                 <li>
-                    <span class="job-title">Software developer/testing</span> | <span class="job-location">okt. 2024 - dec. 2024 | Genk, Brightest (Gumption)</span>
-                    <p class="job-description">Ontwikkeling van een embedded Linux-omgeving met Docker. Sensoren implementeerden data via MQTT naar een Mosquitto-broker, opgeslagen in een MySQL-database en gevisualiseerd met Grafana. Test-driven development (TDD) werd toegepast voor codekwaliteit.</p>
+                    <span class="job-title">Software developer/testing</span><br>
+                    <span class="job-location">okt. 2024 - dec. 2024 | Genk, Brightest (Gumption)</span>
+                    <p class="job-description">Ontwikkeling van een embedded Linux-omgeving met Docker. Sensoren die data via MQTT naar een Mosquitto-broker stuurden, opslag in MySQL en visualisatie met Grafana. TDD (Test-driven development) toegepast voor codekwaliteit.</p>
                 </li>
             </ul>
         </div>
-        <p>Referenties zijn op verzoek beschikbaar.</p>
+        <p>Referenties zijn op aanvraag beschikbaar.</p>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Wil je met mij in contact komen? Hier zijn mijn gegevens:</p>
+        <p>Neem gerust contact met mij op via onderstaande gegevens:</p>
         <ul>
-            <li>Email: <a href="mailto:timvanberghen@hotmail.com">timvanberghen@hotmail.com</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/tim-vanberghen-409002226/" target="_blank">Mijn LinkedIn</a></li>
+            <li><strong>Email:</strong> <a href="mailto:timvanberghen@hotmail.com">timvanberghen@hotmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tim-vanberghen-409002226/" target="_blank">Mijn LinkedIn</a></li>
         </ul>
     </section>
 
     <footer>
-        <p>&copy; 2024 Mijn Portfolio. Alle rechten voorbehouden.</p>
+        <p>&copy; 2024 Tim Vanberghen. Alle rechten voorbehouden.</p>
     </footer>
 </body>
 </html>
